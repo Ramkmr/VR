@@ -44,11 +44,36 @@
             <a-curvedimage id="ho4" src="#home4" transparent="true" 
               height="2" radius="3" theta-length="40" rotation="0  50 0" position="0 0 -2">
             </a-curvedimage>
+             <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+          <a-light type="ambient" color="#fff"></a-light>
 
       <a-sky src="10.jpg"></a-sky>
       <a-entity position="0.8 -1 1">
         <a-camera></a-camera>
       </a-entity>
     </a-scene>
+    <script>
+       AFRAME.registerComponent('auto-enter-vr', {
+             init: function () {
+              this.el.sceneEl.enterVR();
+             }
+            });
+            
+            document.querySelector("#ho1").addEventListener('click', function() {
+                window.location.href = "F:\webvr\a.jpg";
+            });
+            document.querySelector("#ho2").addEventListener('click', function() {
+                window.location.href = "F:\webvr\b.jpg";
+            });
+            document.querySelector("#ho3").addEventListener('click', function() {
+                window.location.href = "F:\webvr\c.jpg";
+            });
+            document.querySelector("#ho4").addEventListener('click', function() {
+                window.location.href = "F:\webvr\d.jpg";
+            });
+    document.querySelector("#ho5").addEventListener('click', function() {
+                window.location.href = "F:\webvr\e.jpg";
+            });
+    </script>
   </body>
 </html>
